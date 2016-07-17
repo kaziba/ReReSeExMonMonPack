@@ -6,13 +6,13 @@ import Home from './modules/Home';
 import Comment from './modules/Comment';
 import About from './modules/About';
 import Repos from './modules/Repos';
+import './reset.css';
+import './index.css';
 
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-
       <IndexRoute component={Home}/>
-
       <Route path="/comment" component={Comment}/>
       <Route path="/repos" component={Repos}/>
       <Route path="/about/:name" component={About}/>

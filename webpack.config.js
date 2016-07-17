@@ -13,7 +13,11 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
-      }
+      },
+      {
+        test: /\.[s]?css$/,
+        loaders: ['style', 'css?modules&localIdentName=[path][name]---[local]---[hash:base64:5]'],
+      },
     ]
   },
   resolve: {
