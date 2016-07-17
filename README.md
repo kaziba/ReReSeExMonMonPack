@@ -24,7 +24,8 @@ React-Tutorial
 
 ### + Mongoose + axios - SuperAgent
 
-TODO ...
+- <a href="http://sahatyalkabov.com/create-a-character-voting-app-using-react-nodejs-mongodb-and-socketio/" target="_blank">Create a character voting app using React, Node.js, MongoDB and Socket.IO</a>
+- <a href="https://github.com/mzabriskie/axios" target="_blank">mzabriskie/axios: Promise based HTTP client for the browser and node.js</a>
 
 <br>
 
