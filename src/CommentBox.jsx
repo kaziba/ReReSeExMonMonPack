@@ -47,17 +47,25 @@ export default class CommentBox extends React.Component {
     });
   }
 
+  // ページを読み込んだときに呼ばれる
   componentDidMount() {
+    console.log('==> componentDidMount');
     this.loadCommentsFromServer();
-    setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+    this.loadCommentsInterval = setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+  }
+
+  // ページから離れたときに呼ばれる
+  componentWillUnmount() {
+    console.log('==> componentWillUnmount');
+    clearInterval(this.loadCommentsInterval);
   }
 
   render() {
     return (
       <div className='commentBox'>
         <h1>Comments</h1>
-        <CommentList data={this.state.data}/>
         <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
+        <CommentList data={this.state.data}/>
       </div>
     );
   }

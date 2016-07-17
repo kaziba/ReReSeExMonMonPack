@@ -48,7 +48,7 @@ var app = module.exports = (() => { // application
   app.disable('x-powered-by');
   app.set('port', process.env.PORT || configs.app.PORT || 3000);
   app.set('views', path.join(__dirname, 'public', 'views'));
-  app.set('view engine', 'pug');
+  app.set('view engine', 'html');
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(cookieParser());
   app.use(bodyParser.json({limit: '50mb'}));
