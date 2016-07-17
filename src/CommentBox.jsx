@@ -1,7 +1,7 @@
-import React from "react";
-import request from "superagent";
-import CommentList from "./CommentList";
-import CommentForm from "./CommentForm";
+import React from 'react';
+import axios from 'axios';
+import CommentList from './CommentList';
+import CommentForm from './CommentForm';
 
 export default class CommentBox extends React.Component {
   constructor(props) {
@@ -14,14 +14,17 @@ export default class CommentBox extends React.Component {
   }
 
   loadCommentsFromServer() {
-    request
-      .get(this.props.url)
-      .end((err, res) => {
-        if (err) {
-          throw err;
-        }
-        this.setState({data: res.body});
-      });
+    axios({
+      url: this.props.url,
+      method: 'get',
+      responseType: 'json'
+    })
+    .then( res => {
+      this.setState({data: res.data});
+    })
+    .catch( err => {
+      throw err;
+    });
   }
 
   handleCommentSubmit(comment) {
@@ -29,16 +32,19 @@ export default class CommentBox extends React.Component {
     comment.id = Date.now();
     var newComments = comments.concat([comment]);
     this.setState({data: newComments});
-    request
-      .post(this.props.url)
-      .send(comment)
-      .end((err, res) => {
-        if (err) {
-          this.setState({data: comments});
-          throw err;
-        }
-        this.setState({data: res.body});
-      });
+    axios({
+      url: this.props.url,
+      method: 'post',
+      responseType: 'json',
+      data: comment
+    })
+    .then( res => {
+      this.setState({data: res.data});
+    })
+    .catch( err => {
+      this.setState({data: comments});
+      throw err;
+    });
   }
 
   componentDidMount() {
@@ -48,7 +54,7 @@ export default class CommentBox extends React.Component {
 
   render() {
     return (
-      <div className="commentBox">
+      <div className='commentBox'>
         <h1>Comments</h1>
         <CommentList data={this.state.data}/>
         <CommentForm onCommentSubmit={this.handleCommentSubmit.bind(this)} />
