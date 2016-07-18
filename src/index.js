@@ -6,8 +6,8 @@ import Home from './modules/Home';
 import Comment from './modules/Comment';
 import About from './modules/About';
 import Repos from './modules/Repos';
-import './reset.css';
-import './index.css';
+import 'normalize.css/normalize.css';
+import './index.scss';
 
 render((
   <Router history={browserHistory}>

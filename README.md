@@ -31,18 +31,15 @@ React-Tutorial
 
 <br>
 
-### + css-loader + style-loader + reset.css
+### + css-loader + style-loader + sass-loader + Normalize.css
 
-TODO ...
-
-
-**css-loader, style-loader, ~~scss-loader~~**
+**css-loader, style-loader, sass-loader**
 
 - <a href="http://qiita.com/_likr/items/c335dec5221024ad56bc" target="_blank">webpackのcss-loaderでCSS Modulesをやる - Qiita</a>
 - <a href="http://qiita.com/nekobato/items/43122e0ff7d260b2b0cc" target="_blank">style-loaderを使ってstylesheetをrequireする - Qiita</a>
 - <a href="http://postd.cc/css-modules/" target="_blank">CSSモジュール ― 明るい未来へようこそ | プログラミング | POSTD</a>
 - <a href="http://stackoverflow.com/questions/35247851/webpack-cant-load-packages-from-node-modules" target="_blank">javascript - Webpack can&apos;t load packages from node_modules - Stack Overflow</a>
-- ~~<a href="https://github.com/jtangelder/sass-loader" target="_blank">jtangelder/sass-loader: SASS loader for Webpack</a>~~
+- <a href="https://github.com/jtangelder/sass-loader" target="_blank">jtangelder/sass-loader: SASS loader for Webpack</a>
 
 **Reset.css**
 
@@ -94,6 +91,8 @@ TODO ...
 
 
 - <a href="https://github.com/airbnb/enzyme" target="_blank">airbnb/enzyme: JavaScript Testing utilities for React</a>
+
+<br>
 
 ### + webpack-dev-server
 

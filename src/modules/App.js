@@ -1,23 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Home from './Home';
+import style from './App.scss';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Krima Syaro</h1>
-        <ul role="nav">
-          <li><Link to="/comment"  activeClassName="active">Comment</Link></li>
-          <li>About</li>
-          <ul>
-            <li><Link to="/about/KirimaSyaro" activeClassName="active">About/KirimaSyaro</Link></li>
-            <li><Link to="/about/TedezaRize" activeClassName="active">About/TedezaRize</Link></li>
+      <header>
+        <nav>
+          <h1 className={style.brand}>Krima Syaro</h1>
+          <ul role="nav">
+            <li className={style.item}><Link to="/comment"  className={style.link} activeClassName="active">Comment</Link></li>
+            <li className={style.item}><Link to="/about/KirimaSyaro" className={style.link} activeClassName="active">About/KirimaSyaro</Link></li>
+            <li className={style.item}><Link to="/about/TedezaRize" className={style.link} activeClassName="active">About/TedezaRize</Link></li>
+
+            <li className={style.item}><Link to="/repos" className={style.link} activeClassName="active">Repos</Link></li>
           </ul>
-          <li><Link to="/repos" activeClassName="active">Repos</Link></li>
-        </ul>
-        {this.props.children || <Home />}
-      </div>
+        </nav>
+        <div className={style.container}>
+          {this.props.children || <Home />}
+        </div>
+      </header>
     );
   }
-};
+}
