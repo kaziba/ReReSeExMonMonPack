@@ -6,6 +6,14 @@ React-Tutorial
     npm i
     npm run dev
 
+# Required
+
+- MongoDB
+- concurrently
+
+    npm install -g concurrently
+
+
 # Reference
 
 ## React + Express

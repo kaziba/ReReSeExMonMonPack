@@ -8,7 +8,7 @@
     "start": "node server.js",
     "express:start": "nodemon server.js",
     "webpack:watch": " webpack --progress --colors --watch",
-    "dev": "concurrent --kill-others \"npm run webpack:watch\" \"npm run express:start\""
+    "dev": "concurrently --kill-others \"npm run webpack:watch\" \"npm run express:start\""
   },
   "author": "eiurur <eiurur789@gmail.com> (http://898525572.tumblr.com/)",
   "license": "MIT",
