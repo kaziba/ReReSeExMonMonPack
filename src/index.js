@@ -7,6 +7,7 @@ import Comment from './modules/Comment';
 import About from './modules/About';
 import Repos from './modules/Repos';
 import 'normalize.css/normalize.css';
+import 'semantic-ui-css/semantic.min.css';
 import './index.scss';
 
 render((

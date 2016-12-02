@@ -1,7 +1,12 @@
 import React from 'react'
+import { Button, Icon } from 'semantic-ui-react';
 
 export default class Home extends React.Component {
   render() {
-    return <div>Home</div>
+    return <div>
+      <Button icon>
+        <Icon name='home' />
+      </Button>
+    </div>;
   }
 }
