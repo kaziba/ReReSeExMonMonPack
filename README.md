@@ -1,20 +1,32 @@
-React-Tutorial
+ReReSeExMonMonPack
 ======
+
+- [x] React
+- [ ] Redux
+- [x] Webpack 1.x
+- [x] Express 4.x
+- [x] MongoDB + mongoose
+- [x] <a href="http://react.semantic-ui.com/introduction">Semantc-UI-React</a>
+- [x] css-modules
 
 # Usage
 
+    git clone https://github.com/kaziba/ReReSeExMonMonPack.git
+    cd ReReSeExMonMonPack
     npm i
     npm run dev
 
 # Required
 
 - MongoDB
+-- v3.2.0 >=
 - concurrently
-
-    npm install -g concurrently
+-- `npm install -g concurrently`
 
 
 # Reference
+
+Just for me.
 
 ## React + Express
 
